@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Algoritmo de Dijkstra Gráfico</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Simulación Gráfica de Dijkstra</h1>
+
+    <label for="numNodos">Cantidad de nodos:</label>
+    <input type="number" id="numNodos" placeholder="Ej. 4">
+    <button onclick="crearCampos()">Crear campos</button>
+
+    <form id="formularioNodos" style="display: none;">
+      <div id="nodosContainer"></div>
+
+      <label for="origen">Nodo de origen:</label>
+      <input id="origen" required>
+
+      <label for="destino">Nodo de destino:</label>
+      <input id="destino" required>
+
+      <button type="submit">Calcular Ruta Más Corta</button>
+    </form>
+
+    <div id="resultado"></div>
+
+    <div id="graph"></div>
+  </div>
+
+  <!-- Usar D3.js desde CDN -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="/static/script.js"></script>
+</body>
+</html>
